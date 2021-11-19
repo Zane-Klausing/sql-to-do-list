@@ -10,13 +10,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Weekend Check-list</h1>
+    <div id="headbar"></div>
     <div id="addtask">
-        <label for="taskToAdd">Task</label>
+        <h1>Weekend Check-list</h1>
+        <label for="taskToAdd">New Task</label>
         <input type="text" id="taskToAdd"/>
         <button id="add">Submit</button>
     </div>
-    <h2>Current Tasks</h2>
     <table id="tableWrapper">
         <thead>
             <tr>
@@ -27,7 +27,9 @@
             </tr>
         </thead>
         <tbody id="tasksTableBody"></tbody>
+        <tfoot></tfoot>
     </table>
+    <div id="bottom"></div>
 </body>
 </html>
 </body>

@@ -1,0 +1,74 @@
+body{
+    background-color: #e3e1de;
+}
+
+#tableWrapper{
+    position: center;
+    border-collapse: collapse;
+    margin: 2em 0;
+    font-size: 1em;
+    min-width: 100%;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgb(36, 36, 36);
+    font-family:sans-serif
+}
+
+#tableWrapper thead tr{
+    background-color:#605a52 ;
+    color: #f1f0ee;
+    text-align: left;
+    font-weight: bold;
+}
+
+
+#tableWrapper th, td{
+    padding: 12px 15px;
+}
+
+#tableWrapper tbody tr {
+    border-bottom: 1px solid #746c63;
+}
+
+#tableWrapper tbody tr:last-of-type {
+    border-bottom: 3px solid #605a52;
+}
+
+
+.incomplete{
+    background-color:#877e73 ;
+    font-weight: bold;
+    color: #f1f0ee
+}
+
+.complete{
+    background-color: #d5d1cd;
+}
+
+#headbar {
+    margin: -10px;
+    padding: 5px;
+    background-color:#605a52;
+}
+
+#addtask {
+    background-color:#a8a199;
+    border-radius: 2px 2px 0 0;
+    font-family:sans-serif;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+#bottom{
+    display: inline-block;
+    border-top: 5px solid #605a52;
+    background-color:#746c63;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem; 
+    margin:-8px;
+}

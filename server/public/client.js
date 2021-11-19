@@ -34,14 +34,28 @@ function renderTasks(){
         $("#tasksTableBody").empty();
         console.log("GET /tasks response", response);
         for (let task of response) {
+            if (task.status === false){
+                let status = 'Not Complete'
         $('#tasksTableBody').append(`
-            <tr>
+            <tr class="incomplete">
             <td>${task.task}</td>
-            <td>${task.status}</td>
-            <td><button class="update-btn" data-id="${task.id}" data-status="${task.status}">Task Complete</button></td>
+            <td>${status}</td>
+            <td><button class="update-btn" data-id="${task.id}" data-status="${task.status}">Complete Task</button></td>
             <td><button class="delete-btn" data-id="${task.id}">Delete</button></td>
             </tr>
         `);
+        }
+        else{
+            let status = 'Complete'
+            $('#tasksTableBody').append(`
+            <tr class="complete">
+            <td>${task.task}</td>
+            <td>${status}</td>
+            <td></td>
+            <td><button class="delete-btn" data-id="${task.id}">Delete</button></td>
+            </tr>
+        `);
+        }
         }
     });
 }
@@ -60,7 +74,6 @@ function deleteTask(){
 function completeTask(){
     const taskToUpdate = $(this).data('id');
     const currentStatus = $(this).data('status');
-
     console.log('taskToUpdate', taskToUpdate);
     console.log('currentStatus', currentStatus);
     $.ajax({
