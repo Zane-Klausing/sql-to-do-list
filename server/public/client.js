@@ -50,7 +50,7 @@ function deleteTask(){
     const taskIdToDelete = $(this).data('id');
     $.ajax({
     type: 'DELETE',
-    url: `/songs/${taskIdToDelete}`
+    url: `/tasks/${taskIdToDelete}`
     }).then((response) => {
     console.log(response);
     renderTasks();
@@ -65,7 +65,7 @@ function completeTask(){
     console.log('currentStatus', currentStatus);
     $.ajax({
     type: 'PUT',
-    url: `/tasks/${taskToUpdate}`,
+    url: `/tasks/taskUpdate/${taskToUpdate}`,
     data: { currentStatus: currentStatus }
     }).then((res) => {
     renderTasks();
